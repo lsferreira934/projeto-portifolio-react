@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", arial, sans-serif;
+  height: 100vh;
+  min-height: -webkit-calc(100vh - 100px);
+  min-height: -moz-calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
+  background: linear-gradient(to top, #0047ffb5 , #ff000063);
+}
+
+.navbar {
+  display: flex;
+  padding: 10px 32px;
+  margin-bottom: 15px;
+}
+
+.navbar .navbar-vazio {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.navbar .navbar-links {
+  flex: 3;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.navbar .navbar-link {
+  margin-right: 20px;
+}
+
+.navbar-link{
+  padding-left: 20px
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 32px;
+  justify-content: center;
+  min-height: -webkit-calc(100vh - 170px);
+  min-height: -moz-calc(100vh - 170px);
+  min-height: calc(100vh - 170px);
+}
+
+.foto {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.foto-perfil {
+  height: auto;
+  width: 250px;
+  border-radius: 50%;
+}
+
+.perfil {
+  flex-direction: column;
+  flex: 1;
+  margin-right: 15px;
+}
+
+.perfil-nome{
+  margin-top:15px;
+  margin-bottom: 10px;
+}
+
+.perfil-nome h2{
+  text-align: center;
+}
+
+.perfil-resumo p{
+  font-size: 14px;
+  text-align: center;
+}
+.descricao-container{
+  flex: 3;
+}
+
+.descricao {
+  padding: 20px;
+  min-width: 320px;
+  box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.descricao .descricao-titulo {
+  margin-bottom: 20px;
+}
+
+.descricao-texto p {
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+.descricao-habilidades{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 32px;
+  margin-top: 15px;
+  height: 100px;
+}
+
+.footer p {
+  margin-top:10px;
+}
+
+.footer span {
+  font-weight: bold;
+}
+
+.icone-link{
+  margin: 10px;
+}
+
+.icone-sm {
+  width: 20px;
+}
+.icone-md {
+  width: 30px;
+}
+.icone-xl {
+  width: 40px;
+}
+
+.habilidade-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 300px;
+  padding:0 10px;
+  box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.2);
+  border-radius:8px;
+  margin-right: 20px;
+}
+
+.habilidade-barraProgresso{
+  height:10px;
+  width:100%;
+  background-color:#ccc;
+  margin: 0 10px;
+  border-radius:10px;
+}
+
+.habilidade-barraProgresso span{
+  display:block;
+  background: linear-gradient(to right, #fff ,#ffa100, #ff0000);
+  border-radius:10px;
+  height:100%;
+}
+
+.habilidade-container p {
+  font-size: 20px;
+  font-weight:bold;
+}
+
+.flex-1{
+  flex: 1;
+  min-width:20px;
+}
+
+.flex-2{
+  flex: 2;
+  min-width:20px;
+}
+
+.flex-3{
+  flex: 3;
+  min-width:20px;
+}
+
+/* medias querys*/
+@media (max-width: 580px) {
+  body{
+    background: linear-gradient(to right, #0047ffb5 , #ff000063);
+  }
+  .perfil {
+    margin-right: 0;
+  }
+  .foto-perfil {
+    width: 200px;
+  }
+  .descricao {
+    margin-top: 20px;
+  }
+  .habilidade-container{
+    flex: 1 1 auto;
+    margin-right: 0;
+  }
+  .navbar{
+    text-align: center;
+  }
+  .navbar-vazio{
+    flex:0 !important;
+  }
+  .navbar-link{
+    padding-left:0;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar-link{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1366px){
+  .flex-1, .flex-2, .flex-3{
+    display:none
+  }
+
+  .descricao-habilidades{
+    justify-content:flex-start;
+  }
+}
