@@ -10,6 +10,7 @@ app.get("/", function(req, res){ //Criar um retorno para servidor
   res.sendFile(path.resolve() + "/www/index.html")//Retorna o arquivo para o caminho "/"
 })
 
-app.listen(process.env.PORT, function(){
-  console.log("Meu servidor está ligado! http://localhost:"+ process.env.PORT)
+const port = process.env.PORT || 3003
+app.listen(port, function(){
+  console.log("Meu servidor está ligado! http://localhost:"+ port)
 })
