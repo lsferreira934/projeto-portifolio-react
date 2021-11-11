@@ -1,9 +1,16 @@
+const listaLinks = [
+  {nome:'Overview', link: 'https://github.com/lsferreira934'},
+  {nome:'Repositories', link:'https://github.com/lsferreira934?tab=repositories'},
+  
+]
+
+
 class App extends React.Component {
   render() {
     return (
       <React.Fragment>
         <div>
-          <Navbar />
+          <Navbar links={listaLinks} />
           <Container>
             <Flex tamanho='2'/>
             <Perfil

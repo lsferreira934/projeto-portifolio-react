@@ -14,9 +14,9 @@ class Navbar extends React.Component {
       <nav className="navbar">
         <div className="navbar-vazio"></div>
         <div className="navbar-links">
-          <a className="navbar-link">Overview</a>
-          <a className="navbar-link">Repositório</a>
-          <a className="navbar-link">Projetos</a>
+          {this.props.links.map((link) => {
+              return <a href={link.link} target="_blank" className="navbar-link">{link.nome}</a>
+          })}
         </div>
       </nav>
     );
